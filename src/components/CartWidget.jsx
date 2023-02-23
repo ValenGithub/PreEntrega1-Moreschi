@@ -1,18 +1,24 @@
-import React from 'react'
+import { Button } from "@chakra-ui/react";
+import { useContext } from "react";
+import { CartContext } from "../contexts/ShoppingCartContext";
 
 const CartWidget = () => {
-  return (
-    <div>
-      <button>
-        <span className="material-symbols-outlined">
-          shopping_cart
-        </span>
-        <span>
-          0
-        </span>
-        </button>
-    </div>
-  )
-}
+  const [cart, setCart] = useContext(CartContext);
 
-export default CartWidget
+  const quantity = cart.reduce((acc, curr) => {
+    return acc + curr.quantity;
+  }, 0);
+
+  return (
+    <>
+      <div className="cart">
+        <Button size="lg" variant="outline" colorScheme="blue">
+          <span className="material-symbols-outlined">shopping_cart</span>
+          <span>{quantity}</span>
+        </Button>
+      </div>
+    </>
+  );
+};
+
+export default CartWidget;
