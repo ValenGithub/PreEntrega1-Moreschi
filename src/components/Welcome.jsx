@@ -6,7 +6,7 @@ const Welcome = () => {
       <Center>
         <Box boxSize="xxl">
           <Image
-            src=""
+            src=" /assets/dunlop.svg"
             alt="negocio"
           />
         </Box>

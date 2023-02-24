@@ -19,13 +19,13 @@ import { Heading } from '@chakra-ui/react';
 const NavBar = () => {
     return (
 <>
-    <Container >
-        <Flex >
+    <Container  maxW="150rem" bg="blue.100" color="#262626">
+        <Flex alignItems="center" gap="2" >
             <Box>
                 
-                <Heading size="md" >
+                <Heading size="sm" >
                 <Link to={"/"}>
-                        <img src="/public/assets/M2.png" alt="logo" />
+                        <img className='logoM' src="/assets/M2.png" alt="logo" />
                 </Link>
                 </Heading>
             </Box>
